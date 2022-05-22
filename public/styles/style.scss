@@ -1,0 +1,134 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+$bottle-green-dark: rgb(19, 87, 76);
+$bottle-green-light: rgb(43, 170, 149);
+
+.wrapper {
+  display: flex;
+  flex-direction: column;
+  min-height: 100vh;
+
+  .header {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background: $bottle-green-dark;
+
+    .top-heading {
+      font-family: 'Russo One', sans-serif;
+      letter-spacing: 2px;
+      margin-top: 20px;
+      color: white;
+    }
+
+    .sub-heading {
+      margin: 0 0 20px 0;
+    }
+
+  }
+
+  .main {
+    flex-grow: 1;
+    margin: 40px 20px 20px 20px;
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-start;
+    align-items: center;
+
+    .form-styling {
+      display: flex;
+      flex-direction: column;
+      justify-content: center;
+      align-items: center;
+      width: 300px;
+
+      h3 {
+        margin: 10px 0 20px 0;
+      }
+  
+      label {
+        margin-bottom: 10px;
+      }
+  
+      input {
+        padding: 4px 0 4px 4px;
+        border: 1px solid black;
+        border-radius: 5px;
+        margin-bottom: 15px;
+        width: 151px;
+      }
+  
+      .button-styling {
+        padding: 6px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background:white;
+        font-size: 14px;
+        color: black;
+        margin: 10px 10px 10px 0;
+      
+        &:hover {
+          border-color: $bottle-green-light;
+          cursor: pointer;
+        }
+      }
+      
+    }
+
+    .accounts-wrapper {
+      width: 80%;
+
+      .button-styling {
+        padding: 6px;
+        border: 1px solid black;
+        border-radius: 5px;
+        background:white;
+        font-size: 14px;
+        color: black;
+        margin: 10px 10px 10px 0;
+      
+        &:hover {
+          border-color: $bottle-green-light;
+          cursor: pointer;
+        }
+      }
+
+      .edit-form {
+        margin-top: 20px;
+        width: 350px;
+      }
+
+      .accounts-container {
+        margin-top: 30px;
+
+        .user-container {
+          border: 2px solid $bottle-green-dark;
+          border-radius: 5px;
+          padding: 10px 0 10px 10px;
+          margin-bottom: 10px;
+          
+          h3 {
+            margin-bottom: 5px;
+          }
+
+        }
+      }
+    }
+  }
+
+  .footer {
+    width: 100%;
+    height: 100px;
+    text-align: center;
+    color: white;
+    padding-top: 25px;
+    background: $bottle-green-dark;
+  }
+
+}

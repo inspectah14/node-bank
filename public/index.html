@@ -1,0 +1,85 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="/styles/style.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Russo+One&display=swap" rel="stylesheet">
+    <title>Banco PML</title>
+  </head>
+  <body>
+    <div class="wrapper">
+
+      <header class="header">
+        <h1 class="top-heading">BANCO PML</h1>
+        <h2 class="top-heading sub-heading">Panama</h2>
+      </header>
+
+      <main class="main">
+
+        <div class="form-container">
+
+          <form action="/api/login" method="POST" id="loginForm" class="form-styling">
+            <h3>Login</h3>
+            <label for="user">Username</label>
+            <input type="text" name="user" id="user" required>
+            <label for="pass">Password</label>
+            <input type="password" name="pass" id="pass" required>
+            <button type="submit" class="button-styling">Login</button>
+          </form>
+
+          <form id="registerBtnForm" class="form-styling">
+            <button type="submit" class="button-styling">Register</button>
+          </form>
+
+          <div class="form-wrapper" id="regFormWrapper">
+            <form action="/api/users" method="POST" id="registerForm" class="form-styling">
+              <h3>Register account</h3>
+              <label for="user">Username</label>
+              <input type="text" name="user" id="regUser" required>
+              <label for="regPass">Password</label>
+              <input type="text" name="pass" id="regPass" required>
+              <label for="regAccName">Account Name</label>
+              <input type="text" name="accName" id="regAccName" required>
+              <label for="regAccBalance">Insert Cash</label>
+              <input type="number" name="accBalance" id="regAccBalance" required>
+              <button type="submit" class="button-styling">Register</button>
+              <button class="button-styling" id="regBackBtn">Back to login</button>
+            </form>
+          </div>
+        </div>
+
+        <div class="accounts-wrapper">
+
+          <form action="/api/logout" method="POST" id="logoutForm" class="logout-form">
+            <button type="submit" class="button-styling">Logout</button>
+          </form>
+
+          <form id="editForm" class="form-styling edit-form">
+            <label for="editAccBalanceInput" id="editBalanceLabel"></label>
+            <input type="number" name="accBalance" id="editAccBalanceInput">
+            <button type="submit" id="editSubmitBtn" class="button-styling"></button>
+            <button type="reset" class="button-styling">Cancel</button>
+          </form>
+
+          <div class="accounts-container" id="accountsContainer">
+
+          </div>
+
+        </div>
+      </main>
+
+      <footer class="footer">
+        <p><strong>Banco PML</strong></p>
+        <p>Cresta Palace, La Cresta</p>
+        <p>Panama City, Panama</p>
+      </footer>
+
+    </div>
+
+    <script src="main.js"></script>
+  </body>
+</html>
